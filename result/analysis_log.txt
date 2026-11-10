@@ -1,0 +1,40 @@
+=== DATA QUALITY ===
+{
+ "raw_user_rows": 60480,
+ "duplicate_user_rows": 462,
+ "missing_country_rows": 956,
+ "bot_users_removed": 346,
+ "bot_users_A": 158,
+ "bot_users_B": 188,
+ "human_avg_rounds_p99.9": 26.0,
+ "human_avg_rounds_max": 33.642857142857146,
+ "final_users": 59672
+}
+
+=== SRM === {'n_A': 29736, 'n_B': 29936, 'chi2': 0.670331143584931, 'p_value': 0.4129361791443703} 
+balance p: {'channel': 0.8054190335193074, 'platform': 0.13470073396077692, 'country': 0.10885887120955853}
+
+=== RETENTION ===
+d1 {'n_A': 29736, 'n_B': 29936, 'rate_A': np.float64(0.4275), 'rate_B': np.float64(0.4621), 'diff': np.float64(0.0346), 'ci_low': np.float64(0.0267), 'ci_high': np.float64(0.0426), 'rel_lift': np.float64(0.081), 'p_value': 0.0}
+d7 {'n_A': 29736, 'n_B': 29936, 'rate_A': np.float64(0.1834), 'rate_B': np.float64(0.1999), 'diff': np.float64(0.0165), 'ci_low': np.float64(0.0102), 'ci_high': np.float64(0.0228), 'rel_lift': np.float64(0.0899), 'p_value': 0.0}
+d14 {'n_A': 29736, 'n_B': 29936, 'rate_A': np.float64(0.1334), 'rate_B': np.float64(0.1364), 'diff': np.float64(0.003), 'ci_low': np.float64(-0.0025), 'ci_high': np.float64(0.0085), 'rel_lift': np.float64(0.0224), 'p_value': 0.2861}
+
+=== ENGAGEMENT === {'rounds_7d_mean_A': 26.23987758945386, 'rounds_7d_mean_B': 27.520978086584716, 'rounds_7d_median_A': 20.0, 'rounds_7d_median_B': 21.0, 'mann_whitney_p': 5.518033048111612e-16}
+
+=== MONETIZATION ===
+payer_rate {'n_A': 29736, 'n_B': 29936, 'rate_A': np.float64(0.045), 'rate_B': np.float64(0.0425), 'diff': np.float64(-0.0025), 'ci_low': np.float64(-0.0058), 'ci_high': np.float64(0.0008), 'rel_lift': np.float64(-0.0549), 'p_value': 0.1399}
+arpu {'mean_A': 0.4217, 'mean_B': 0.3697, 'diff': -0.052, 'ci_low': -0.0979, 'ci_high': -0.0045, 'p_value': 0.031}
+arppu {'mean_A': 9.3716, 'mean_B': 8.6945, 'diff': -0.6771, 'ci_low': -1.5098, 'ci_high': 0.0974, 'p_value': 0.09}
+
+=== REGRESSION === {'odds_ratio_B': 1.1107497977177845, 'or_ci_low': 1.0662654267639418, 'or_ci_high': 1.1570900473388785, 'interaction_lr_chi2': 7.921515695532435, 'interaction_df': 3, 'interaction_p': 0.047661895531014783}
+
+=== POWER === {'mde_d7_overall_pp': 0.8891272726167212, 'mde_d7_by_segment_pp': {'ad_network': 1.6544579704841407, 'organic': 1.562027859607372, 'paid_social': 1.5849330633446457, 'referral': 2.9765729460280275}}
+
+=== SEGMENTS ===
+dimension     segment     n  d1_diff_pp   d7_A   d7_B  d7_diff_pp  d7_ci_low_pp  d7_ci_high_pp   d7_p  payer_diff_pp  payer_p  arpu_A  arpu_B  arpu_diff  arpu_ci_low  arpu_ci_high  arpu_p  extra_d7_users_per_10k  arpu_delta_per_10k_usd  breakeven_value_per_extra_d7_user  d7_p_bh  arpu_p_bh
+  channel  ad_network 14891      7.0724 0.1533 0.1804      2.7020        1.5049         3.8990 0.0000        -0.4746   0.1328  0.4185  0.3343    -0.0842      -0.1738        0.0085   0.072                270.1962               -842.2063                             3.1170   0.0000      0.216
+  channel     organic 20985      0.7079 0.2052 0.2157      1.0539       -0.0490         2.1569 0.0611         0.0625   0.8285  0.4429  0.3823    -0.0605      -0.1350        0.0208   0.140                105.3948               -605.2163                             5.7424   0.0733      0.280
+  channel paid_social 17800      4.9545 0.1720 0.1911      1.9095        0.7774         3.0416 0.0010        -0.4357   0.1467  0.3766  0.3576    -0.0190      -0.0972        0.0588   0.648                190.9499               -189.6523                             0.9932   0.0019      0.648
+  channel    referral  5996     -0.4333 0.2158 0.2185      0.2756       -1.8116         2.3628 0.7958        -0.2148   0.7153  0.4887  0.4492    -0.0395      -0.1905        0.1173   0.608                 27.5612               -395.2356                            14.3403   0.7958      0.648
+ platform     android 37070      3.6322 0.1757 0.1934      1.7694        0.9798         2.5591 0.0000        -0.2253   0.2771  0.4002  0.3633    -0.0369      -0.0952        0.0230   0.208                176.9449               -369.2174                             2.0866   0.0000      0.312
+ platform         ios 22602      3.1225 0.1961 0.2103      1.4193        0.3704         2.4681 0.0080        -0.2924   0.3010  0.4573  0.3801    -0.0772      -0.1594       -0.0050   0.044                141.9283               -772.0693                             5.4399   0.0120      0.216
